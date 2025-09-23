@@ -22,7 +22,7 @@ public class LabSeqController {
     public Response getLabSeq(@PathParam("n") int n) {
         try {
             BigInteger value = labSeqService.calculateLabSeq(n);
-            return Response.ok(value.toString()).build();
+            return Response.ok(value).build();
         } catch (IllegalArgumentException e) {
             return Response.status(Response.Status.BAD_REQUEST)
                     .entity(e.getMessage())

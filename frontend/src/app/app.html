@@ -1,0 +1,12 @@
+<div class="labseq-container">
+  <div class="labseq-title">Labseq Sequence</div>
+  <input type="number" [(ngModel)]="n" placeholder="Enter n">
+  <button (click)="calculateLabSeq()">Calculate</button>
+
+  <div *ngIf="loading">Calculating...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div *ngIf="result" class="labseq-result-row">
+    <span class="labseq-result-label">Value: </span><span class="labseq-result-value">{{ displayResult }}</span>
+  </div>
+</div>

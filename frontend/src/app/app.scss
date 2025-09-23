@@ -1,0 +1,78 @@
+body {
+  background: #181818;
+  color: #f0f0f0;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.labseq-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 60vh;
+  width: 100vw;
+  max-width: 350px;
+  margin: 0 auto;
+  background: #232323;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+  padding: 40px 32px 32px 32px;
+  position: relative;
+  top: 0;
+}
+
+.labseq-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 36px;
+  color: #90caf9;
+  letter-spacing: 1px;
+}
+
+input[type="number"] {
+  width: 260px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+  background: #232323;
+  color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+button {
+  width: 260px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1976d2;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #1565c0;
+}
+
+.error {
+  color: #ef5350;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin: 0;
+  font-size: 1.1rem;
+}
