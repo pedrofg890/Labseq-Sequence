@@ -54,7 +54,7 @@ The backend exposes a REST API for retrieving LabSeq sequence values. Below are 
   - `n` (integer, required): The index in the LabSeq sequence (must be >= 0).
 - **Responses:**
   - `200 OK`: Returns the LabSeq value as a number.
-    - Example: `2`
+    
   - `400 Bad Request`: Returned if the input is invalid (e.g., negative index). Returns a JSON error object.
     
   - `500 Internal Server Error`: Returned if an unexpected error occurs. Returns a JSON error object.
