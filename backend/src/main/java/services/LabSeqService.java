@@ -20,13 +20,23 @@ public class LabSeqService {
             throw new IllegalArgumentException("Index must be non-negative");
         }
 
-        switch (n) {
-            case 0: return BigInteger.ZERO;
-            case 1: return BigInteger.ONE;
-            case 2: return BigInteger.ZERO;
-            case 3: return BigInteger.ONE;
-            default:
-                return calculateLabSeq(n - 4).add(calculateLabSeq(n - 3));
+        // Initial Conditions
+        if (n == 0) return BigInteger.ZERO;
+        if (n == 1) return BigInteger.ONE;
+        if (n == 2) return BigInteger.ZERO;
+        if (n == 3) return BigInteger.ONE;
+
+        // Iterative Calculation
+        BigInteger[] labSeq = new BigInteger[n + 1];
+        labSeq[0] = BigInteger.ZERO;
+        labSeq[1] = BigInteger.ONE;
+        labSeq[2] = BigInteger.ZERO;
+        labSeq[3] = BigInteger.ONE;
+
+        for (int i = 4; i <= n; i++) {
+            labSeq[i] = labSeq[i - 4].add(labSeq[i - 3]);
         }
+
+        return labSeq[n];
     }
 }
