@@ -5,14 +5,30 @@ import io.quarkus.cache.CacheResult;
 
 import java.math.BigInteger;
 
+/**
+ * Service for calculating values in the LabSeq sequence.
+ * <p>
+ * The LabSeq sequence is defined as:
+ * <ul>
+ *   <li>labseq(0) = 0</li>
+ *   <li>labseq(1) = 1</li>
+ *   <li>labseq(2) = 0</li>
+ *   <li>labseq(3) = 1</li>
+ *   <li>labseq(n) = labseq(n-4) + labseq(n-3) for n &gt;= 4</li>
+ * </ul>
+ * This service uses caching for performance and throws an IllegalArgumentException for negative indices.
+ */
 @ApplicationScoped
 public class LabSeqService {
 
     /**
-     * Calculate LabSeq value at index n with caching.
+     * Calculates the LabSeq value at the given index n.
+     * <p>
+     * Uses an iterative approach and caches results for efficiency.
      *
-     * @param n non-negative index
-     * @return LabSeq value as BigInteger
+     * @param n the non-negative index in the LabSeq sequence
+     * @return the LabSeq value as a BigInteger
+     * @throws IllegalArgumentException if n is negative
      */
     @CacheResult(cacheName = "labSeq-cache")
     public BigInteger calculateLabSeq(int n) {
