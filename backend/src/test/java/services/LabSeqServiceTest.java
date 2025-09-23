@@ -4,8 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import java.math.BigInteger;
 
-class LabseqServiceTest {
-    private final LabseqService service = new LabseqService();
+class LabSeqServiceTest {
+    private final LabSeqService service = new LabSeqService();
 
     @Test
     public void testNegativeInputThrowsException() {

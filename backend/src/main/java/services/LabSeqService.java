@@ -6,7 +6,7 @@ import io.quarkus.cache.CacheResult;
 import java.math.BigInteger;
 
 @ApplicationScoped
-public class LabseqService {
+public class LabSeqService {
 
     /**
      * Calculate LabSeq value at index n with caching.
